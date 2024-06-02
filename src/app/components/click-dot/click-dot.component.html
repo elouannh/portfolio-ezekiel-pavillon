@@ -1,5 +1,5 @@
 <main class="click-dot-main">
-  <div class="click-dot-container" (click)="window.location.href = link">
+  <div class="click-dot-container" (click)="router.navigate(['/topic'], { queryParams: { name: topicName } })">
     <div class="dot-heartbeat animated-dot heartbeat">
       <div class="dot-ping animated-dot ping"></div>
     </div>

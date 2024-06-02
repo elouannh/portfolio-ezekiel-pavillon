@@ -3,15 +3,15 @@ import {ClickDotComponent} from "../click-dot/click-dot.component";
 import {NgOptimizedImage} from "@angular/common";
 
 @Component({
-  selector: 'room',
+  selector: 'room-dots',
   standalone: true,
   imports: [
     ClickDotComponent,
     NgOptimizedImage
   ],
-  templateUrl: './room.component.html',
-  styleUrl: './room.component.scss'
+  templateUrl: './room-dots.component.html',
+  styleUrl: './room-dots.component.scss'
 })
-export class RoomComponent {
+export class RoomDotsComponent {
 
 }
