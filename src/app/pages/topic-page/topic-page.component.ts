@@ -6,9 +6,13 @@ export type TopicName =
   | 'television'
   | 'trophy'
   | 'note'
-  | 'frame'
+  | 'frame1'
+  | 'frame2'
+  | 'frame3'
   | 'monitor'
-  | 'calendar'
+  | 'media1'
+  | 'media2'
+  | 'media3'
   | 'poster';
 
 @Component({

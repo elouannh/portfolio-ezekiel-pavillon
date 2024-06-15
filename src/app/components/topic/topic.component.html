@@ -1,1 +1,17 @@
-<p>{{ topicName }}</p>
+<main class="page-main">
+  <h1 *ngIf="title" class="topic-title">{{ title }}</h1>
+  <div *ngFor="let elt of content" class="items">
+    <div *ngIf="elt.type === 'vimeo'" class="vimeo">
+      <div [innerHTML]="sanitize(elt.embed || '')"></div>
+    </div>
+    <div *ngIf="elt.type === 'text'" class="text" [ngClass]="{ 'text': true, 'is-first': elt.first }">
+      <p>{{ elt.content }}</p>
+    </div>
+    <div *ngIf="elt.type === 'image' && elt.link" class="image" [ngClass]="{ 'text': true, 'is-first': elt.first }">
+      <img [src]="elt.link" [style]="{ 'width': elt.width }"/>
+    </div>
+    <div *ngIf="elt.type === 'link' && elt.href" class="link" [ngClass]="{ 'text': true, 'is-first': elt.first }">
+      <a [href]="elt.href" class="link-to-website" target="_blank">{{ elt.content }}</a>
+    </div>
+  </div>
+</main>

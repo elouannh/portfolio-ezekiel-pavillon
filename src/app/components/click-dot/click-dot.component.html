@@ -1,6 +1,16 @@
+
+
+
 <main class="click-dot-main">
-  <div class="click-dot-container" (click)="router.navigate(['/topic'], { queryParams: { name: topicName } })">
-    <div class="dot-heartbeat animated-dot heartbeat">
+  <div class="click-dot-container" (click)="this.openOrNavigate()">
+    <div
+      [ngClass]="{
+        'disabled': disabled,
+        'extern': link !== 'None',
+        'dot-heartbeat': true,
+        'animated-dot': true,
+        'heartbeat': true
+      }">
       <div class="dot-ping animated-dot ping"></div>
     </div>
   </div>
