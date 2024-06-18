@@ -22,4 +22,10 @@ export class AppComponent {
   onResize(event: Event): void {
     this.innerWidth = window.innerWidth;
   }
+
+  checkIfPC(): boolean {
+    const userAgent: string = navigator.userAgent;
+    console.log(userAgent, /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent));
+    return !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent));
+  }
 }
