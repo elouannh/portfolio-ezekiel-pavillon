@@ -1,4 +1,4 @@
-<router-outlet *ngIf="innerWidth > 1700 || !checkIfPC()"/>
+<router-outlet *ngIf="innerWidth > 1700 || checkIfPC()"/>
 <div class="not-supported" *ngIf="innerWidth <= 1700 && !checkIfPC()">
   <h1>Ce portfolio n'est accessible que sur un ordinateur.</h1>
 </div>
